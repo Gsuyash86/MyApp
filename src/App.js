@@ -19,10 +19,10 @@ function App() {
         <Navbar title="Utils" mode={mode} toggleMode={toggleMode} />
         <Switch>
           <Route path="/about">
-            <Aboutus />
+            <Aboutus mode={mode} />
           </Route>
           <Router path="/">
-            <Form heading="Enter about you here" />
+            <Form heading="Enter about you here" mode={mode} />
           </Router>
         </Switch>
       </Router>
