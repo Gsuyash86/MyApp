@@ -42,7 +42,12 @@ export default function Form({ heading }) {
         <h1>The total number of words : </h1>
         <p>
           {text.length} character and{" "}
-          {text.length === 0 ? 0 : text.split(" ").length} words
+          {text.length === 0
+            ? 0
+            : text.split(" ").filter((element) => {
+                return element.length !== 0;
+              }).length}{" "}
+          words
         </p>
       </div>
     </div>
